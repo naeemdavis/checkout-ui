@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="102px" height="102px" viewBox="0 0 102 102" enable-background="new 0 0 102 102" xml:space="preserve">
+<symbol  id="TextInput_x5F_borderSkin" viewBox="-77 -11 154 22">
+	<polygon fill="#FFFFFF" points="76.25,-10 -76.249,-10 -76.249,10 76.25,10 	"/>
+	<polygon fill="#6E6F70" points="-76.25,10 -76.25,11 76.25,11 76.25,10 -76.25,10 	"/>
+	<polygon fill="#D2D5D6" points="-77,-11 -77,11 -76.998,11 -76.003,11 -76.003,-10 76.003,-10 76.003,11 77,11 77,-11 -77,-11 	"/>
+</symbol>
+<symbol  id="TextInput_x5F_borderSkin_2" viewBox="-77 -11 154 22">
+	<polygon fill="#FFFFFF" points="76.25,-10 -76.249,-10 -76.249,10 76.25,10 	"/>
+	<polygon fill="#6D6F70" points="-76.25,10 -76.25,11 76.25,11 76.25,10 -76.25,10 	"/>
+	<polygon fill="#D3D5D6" points="-77,-11 -77,11 -76.998,11 -76.003,11 -76.003,-10 76.003,-10 76.003,11 77,11 77,-11 -77,-11 	"/>
+</symbol>
+<g id="acr_bubbles">
+	<g id="play_static">
+		<g>
+			<path fill="#F18F00" d="M101,51c0,27.612-22.383,50-50.005,50C23.383,101,1,78.612,1,51.002C1,23.38,23.378,1,51,1
+				C78.612,1,101,23.382,101,51z"/>
+			<g>
+				<path fill="#FFFFFF" d="M45.482,56.639H26l-0.005-11.03h19.487V25.97h11.025v19.639H76l-0.01,11.03H56.508v19.387H45.482V56.639
+					z"/>
+			</g>
+		</g>
+	</g>
+	<g id="download_static">
+	</g>
+</g>
+</svg>

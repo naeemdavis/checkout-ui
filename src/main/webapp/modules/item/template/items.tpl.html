@@ -1,0 +1,20 @@
+
+
+<div class="card-deck">
+    <div ng-repeat="item in items" id="account-panel-1"
+        class="col-md-4 col-sm-6 col-xs-12 account container ng-scope panel-wrapper"
+        ng-class="{'panel-wrapper showsb': $root.toggleState=='SHOW', 'panel-wrapper hidesb': $root.toggleState=='HIDE'}">
+
+         <div class="account name fire">
+                    <span>{{item.name}}</span>
+          </div>
+
+          <div class="account name fire">
+                    <span>{{item.price}}</span>
+         </div>
+
+        </div>
+    </div>
+</div>
+
+

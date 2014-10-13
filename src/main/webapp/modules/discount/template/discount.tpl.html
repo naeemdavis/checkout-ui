@@ -1,0 +1,32 @@
+
+
+
+    <div>
+        <div id ="formFields">
+            <div class="login-form" >
+                <div ng-show="$root.toastService.hasToasts()">
+                    <alert ng-repeat="alert in $root.toastService.getToasts() | limitTo:1"
+                        id="AlertRepeat" name="infoAlert" close="closeLogoutAlert()" class="alert fade in login-toast"
+                        type="alert.type">
+                        {{alert.message}}
+                    </alert>
+                </div>
+                <form name="userForm" ng-submit="login()" class="form-horizontal" novalidate>
+                    <fieldset>
+                        <legend class="pull-left login-legend">{{ 'CHECKOUT' | translate }}</legend>
+                        <div>
+                                                <label id="emailAddressLabel" class="control-label text-box-control-label" for="username">{{ 'EMAIL_ADDRESS' | translate }}</label>
+                          <input id="emailAddressInput" type="text" class="form-control  text-box" name="username" ng-model="username" required autocomplete="off"/>
+
+                          <label id="passwordLabel" class="control-label text-box-control-label" for="password">{{ 'PASSWORD' | translate }}</label>
+                          <input id="passwordInput" type="password" class="form-control  text-box" name="password" ng-model="password" required autocomplete="off"/>
+
+                          <div class="pull-right" >
+                              <button id="submitButton" type="submit" class="btn btn-primary btn-md submit-button" ng-disabled="userForm.$invalid">{{ 'CHECKOUT' | translate }}</button>
+                          </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,1384 @@
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    position:relative;
+}
+body {
+    font-family: @standard-font-family;
+    font-size: @standard-font-size;
+    font-weight: @standard-font-weight;
+    -webkit-font-smoothing: antialiased;
+    background-color: #e8e5e3;
+    background-repeat: no-repeat;
+    background-position-x: -10px;
+    background-position-y: 91px;
+}
+html {
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width:6px;
+    height:6px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color:#eaeaea;
+    -webkit-border-radius:3px;
+}
+::-webkit-scrollbar-thumb:vertical {
+    width:50px;
+    background-color:#888;
+    -webkit-border-radius:3px;
+}
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+    & > li {
+        display: inline;
+    }
+    & > li:before {
+        content: "|";
+        padding-right: 0.3em;
+    }
+    & > li:nth-child(1):before {
+        content: "";
+        padding: 0;
+    }
+}
+.menu:before {
+    content: "[";
+}
+.menu:after {
+    content: "]";
+}
+.menu.item {
+    padding: 10px 15px 0px 10px;
+    cursor: pointer;
+    float: left;
+    height: 40px;
+}
+.menu.item.last {
+    border-right: 0px;
+}
+.menu.item.active {
+    background: #777;
+}
+
+.wrapper {
+    min-height: @app-container-height-minus-footer;
+    height: @app-container-height-minus-footer;
+    margin: 0 auto -70px;
+    margin-bottom:0px;
+}
+
+.app.bottom.container {
+  position: relative;
+  clear: both;
+  border-top: 1px solid #d4d4d4;
+  background: rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+  min-height: 70px;
+  z-index: 10;
+  min-width: 100%;
+  height:auto;
+}
+.app.bottom.content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    padding: 0px 20px;
+    line-height: 12px;
+    color: #000;
+    font-weight: @standard-font-weight;
+    font-size: 12px;
+}
+
+.btn-cancel{
+    .button-variant(white; grey; grey);
+}
+
+.alert-error {
+  .alert-variant(@alert-validation-rf-bg; @alert-validation-rf-border; @alert-validation-rf-text);
+    border: @alert-validation-rf-border-th;
+    border-radius:@alert-border-radius;
+}
+
+.alert-info {
+  .alert-variant(@alert-success-rf-bg; @alert-success-rf-border; @alert-success-rf-text);
+    border: @alert-success-rf-border-th;
+    border-radius:@alert-border-radius;
+}
+
+.alert-validation-rf .alert-link {
+    color: #843534;
+}
+
+.login-legend{
+    text-transform: uppercase;
+    float: left;
+    padding: 0;
+    margin:0;
+    border:0;
+    color: @login-legend-color;
+    font-size: @login-legend-font-size;
+    font-weight: @login-legend-font-weight;
+    line-height: @login-legend-line-height;
+    margin-left: @login-legend-margin-left;
+    margin-top:@login-legend-margin-top;
+    margin-bottom:@login-legend-margin-bottom;
+    padding-top:@login-legend-padding-top;
+    padding-bottom:@login-legend-padding-bottom;
+}
+
+.login-ctrl-divider{
+    border-top: @login-ctrl-divider-border-top;
+    margin-left: @login-ctrl-divider-margin-left;
+    margin-right: @login-ctrl-divider-margin-right;
+    margin-top: @login-ctrl-divider-margin-top;
+}
+
+
+.login-toast{
+    vertical-align:middle;
+    margin: @login-toast-margin;
+}
+
+
+.text-box-control-label{
+    font-family: @standard-font-family;
+    font-size: @text-box-label-font-size;
+    font-weight: @text-box-label-font-weight;
+    padding-bottom:@text-box-label-padding-bottom;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+.text-box{
+    padding: @text-box-padding;
+    color: @text-box-color;
+    margin: @text-box-margin;
+    border: @text-box-border;
+    background: @text-box-background;
+    -webkit-box-sizing: border-box;
+    font-size: @text-box-font-size;
+    font-weight: @text-box-font-weight;
+    font-family: @standard-font-family;
+    min-height:@text-box-min-height;
+    border-radius:@text-box-border-radius;
+    width: @text-box-width;
+}
+
+.login {
+  background-color:@login-page-bg;
+  img {
+    width:@login-img-width;
+    height:@login-img-height;
+    margin:@login-img-margin;
+  }
+}
+
+
+.login-form {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: @login-form-marging-top;
+  padding:@login-form-padding;
+  max-width:@login-form-max-width;
+  box-shadow:@login-form-box-shadow;
+  background:@login-form-bg;
+}
+
+.submit-button{
+    border-radius:@submit-button-border-radius;
+    font-weight: @submit-button-font-weight;
+    font-style: @submit-button-font-style;
+    font-size:@submit-button-font-size;
+    text-align:@submit-button-text-align;
+    vertical-align:@submit-button-vertical-align;
+    padding: @submit-button-padding;
+    margin-bottom: @submit-button-margin-bottom;
+}
+
+.app.header.container {
+    background: @header-container-bg;
+    border-bottom: @header-container-border-bottom;
+    height: @header-container-height;
+    z-index: @header-container-z-index;
+    width:@header-container-width;
+    margin-bottom:0px;
+}
+
+.app.user.container {
+    padding: @header-user-container-padding;
+}
+
+.app-container {
+    margin-top: @app-container-margin-top;
+    margin-bottom: @app-container-margin-btm;
+    z-index:@app-container-z-index;
+    position:relative;
+    width:100%;
+    height: ~"calc(100% - 60px)";
+}
+.main-grid-row {
+    height: 100%;
+    min-height: 100%;
+}
+
+
+.app.main.container {
+    margin-left:@app-main-container-margin-left;
+    position: relative;
+    overflow:auto;
+    height: auto;
+    bottom: 0px;
+    margin-top: 0;
+    top: 0px;
+    min-width: 400px;
+    border: @app-main-container-border;
+    border-left: @app-main-container-border-left;
+    border-top: 0px;
+    background-color: @main-container-bg;
+    border-radius: @app-main-container-border-rad;
+    z-index: @app-main-container-z-index;
+    height:@app-main-container-height;
+    width: @main-container-width-minus-sidebar;
+    -webkit-transition: @app-default-transition;
+   -moz-transition: @app-default-transition;
+   -o-transition: @app-default-transition;
+   transition: @app-default-transition;
+}
+
+
+//TODO: define toast variables when we implement Toast notifications
+.app-toast-container {
+    position: relative;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    line-height: 16px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-left: -230px;
+}
+.app-toast-content {
+    position: relative;
+    font-weight: 300;
+    font-size: @standard-font-size;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 10px 20px 10px 0px;
+    text-align: center;
+    box-shadow: 0px -3px 3px -2px #bbb inset;
+    background-color: #efefef;
+    color: #254148;
+    margin: 0 auto;
+    width: 100%;
+    z-index:999;
+}
+
+li.active {
+    width:100%;
+}
+.sidebar-item {
+    font-size:@standard-font-size;
+    font-weight:@standard-font-weight;
+    opacity:0.75;
+}
+
+
+
+.sidebar-container {
+    width:260px;
+    top: 0px;
+    position:absolute;
+    background-color: rgb(89, 87, 85);
+    border: @sidebar-border;
+    border-radius: @sidebar-border-radius;
+    box-sizing: @sidebar-box-sizing;
+    z-index: @sidebar-z-index;
+    height:100%;
+    bottom: 0px;
+    font-family: @standard-font-family;
+    font-size: @standard-font-size;
+    font-weight: @standard-font-weight;
+    padding: @sidebar-padding;
+    padding-top:5px;
+    padding-left:20px;
+    overflow:auto;
+    -moz-box-sizing: border-box;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+    -webkit-font-smoothing: antialiased;
+    a {
+        font-family: @standard-font-family;
+        color: white;
+        font-size: @standard-font-size;
+        font-weight: @standard-font-weight;
+        -webkit-font-smoothing: antialiased;
+        position:relative;
+    }
+}
+
+
+.sidebar-toggle{
+    height: @sidebar-toggle-height;
+    width: @sidebar-toggle-width;
+    margin-left: @sidebar-toggle-margin-left;
+    margin-right:@sidebar-toggle-margin-right;
+    float: left;
+    position: fixed;
+    cursor:pointer;
+}
+
+.sidebar-toggleLG{
+    height: @sidebar-toggle-height;
+    width: @sidebar-toggle-width;
+    margin-left: @sidebar-toggle-margin-left;
+    margin-right:@sidebar-toggle-margin-right;
+    float: left;
+    position: fixed;
+    cursor:pointer;
+  }
+
+.sidebar-bullet{
+    height: @sidebar-bullet-height;
+    width: @sidebar-bullet-width;
+    margin-right: @sidebar-bullet-margin-right;
+    padding-right: @sidebar-bullet-padding-right;
+}
+
+
+
+.sidebar-line {
+    float: left;
+    clear: both;
+    height: @sidebar-line-height;
+    width: @sidebar-line-width;
+    border-bottom-color: @sidebar-line-border-bottom-color;
+    border-bottom-width: @sidebar-line-border-bottom-width;
+    border-bottom-style: @sidebar-line-border-bottom-style;
+    margin-right: @sidebar-line-margin-right;
+    margin-top: @sidebar-line-margin-top;
+    margin-bottom: @sidebar-line-margin-bottom;
+}
+
+
+.brand-image {
+    width: @brand-image-width;
+    height: @brand-image-height;
+    margin-top:@brand-image-margin-top;
+}
+
+.user-logout-image {
+    border-radius: @user-logout-image-border-radius;
+    width: @user-logout-image-width;
+    height: @user-logout-image-height;
+    padding-left: @user-logout-image-padding-left;
+    border-left: @user-logout-image-border-left;
+    text-align: @user-logout-image-text-align;
+    margin-left: @user-logout-image-margin-left;
+    margin-top: @user-logout-image-margin-top;
+}
+
+.user-logout-text {
+    text-align: right;
+    vertical-align: top;
+    padding-left: @user-logout-text-padding-left;
+    margin-left: @user-logout-text-margin-left;
+    margin-top: @user-logout-text-margin-top;
+    padding-top: @user-logout-text-padding-top;
+    font-weight: @user-logout-text-font-weight;
+    line-height: @user-logout-text-line-height;
+    color: @user-logout-text-color;
+}
+
+
+.user-logout-text:hover {
+    text-decoration:none;
+    color: @user-logout-text-color;
+}
+
+.navbar-user {
+    text-align: right;
+    float: right;
+    width: @navbar-user-width;
+    margin-left: @navbar-user-margin-left;
+    margin-right: @navbar-user-margin-right;
+    height: @navbar-user-height;
+    margin-bottom: @navbar-user-margin-bottom;
+    margin-top: @navbar-user-margin-top;
+}
+
+.navbar-logout{
+    cursor:pointer;
+    float:right;
+    margin-left:@navbar-logout-margin-left;
+    width:@navbar-logout-width;
+    margin-top:@navbar-logout-margin-top;
+    padding-left:@navbar-logout-padding-left;
+}
+
+.user-header {
+    float: right;
+    padding-left: @user-header-padding-left;
+    padding-top: @user-header-padding-top;
+    width: @user-header-width;
+}
+
+
+.user-header-profile-company-text {
+  cursor:pointer;
+  color: @user-header-profile-text-color;
+  font-size: @user-header-profile-company-text-font-size;
+  font-weight: @user-header-profile-company-text-font-weight;
+}
+
+.user-header-profile-company-text:hover{
+    text-decoration:none;
+    color:inherit;
+}
+
+.user-header-profile-user-text  {
+    cursor:pointer;
+    color: @user-header-profile-text-color;
+    font-size: @user-header-profile-user-text-font-size;
+    font-weight: @user-header-profile-user-text-font-weight;
+ }
+
+ .user-header-profile-user-text:hover{
+    text-decoration:none;
+    color:inherit;
+}
+
+.user-header-signin-text {
+    line-height:@user-header-signin-line-height;
+    font-size: @user-header-signin-font-size;
+    font-weight: @standard-font-weight;
+    padding-right: 10px;
+}
+
+.user-header-link {
+    cursor: pointer;
+    color:black;
+    text-decoration: underline;
+    font-family: @standard-font-family;
+    font-size: @user-header-font-size;
+    font-weight: @standard-font-weight;
+    -webkit-font-smoothing: antialiased;
+    opacity:@user-header-font-opacity;
+}
+
+.header-container {
+    width: @header-container_width;
+}
+
+.account.panel {
+    cursor: pointer;
+    display: block;
+    box-shadow: @account-pnl-box-shadow;
+    background:@account-pnl-background;
+    border-radius: @account-pnl-border-radius;
+    padding: @account-pnl-padding;
+    min-width: @account-panel-min-width;
+    height: @account-panel-height;
+    width: 100%;
+}
+
+.account.name {
+    width: 100%;
+    float: left;
+    display: block;
+    cursor: default;
+    font-weight: @account-name-font-weight;
+    text-shadow: @account-name-text-shadow;
+    font-size: @account-name-font-size;
+    color: @account-name-color;
+    padding-bottom: @account-name-padding-bottom;
+}
+
+.account.link{
+    text-transform: uppercase;
+    font-weight: @account-link-font-weight;
+    font-size: @account-link-font-size;
+}
+
+.account.rlximage{
+    width: @account-img-width;
+    height: @account-img-height;
+    float: @account-img-float;
+    margin-right:@account-img-margin-right;
+    margin-top: @account-img-margin-top;
+}
+
+
+
+.account-amount-container {
+  width: 100%;
+  text-align: right;
+  display: block;
+  padding-top: @account-amount-container-padding-top;
+  color: @account-amount-container-color;
+  padding-bottom: @account-amount-container-padding-bottom;
+}
+
+
+
+.account-amount-value {
+  font-weight: @account-amount-value-font-weight;
+  font-size: @account-amount-value-font-size;
+  margin-top: @account-amount-value-margin-top;
+  padding-right: @account-amount-value-padding-right;
+}
+
+.account-amount-curr {
+  color: inherit;
+  font-weight: @account-amount-curr-font-weight;
+  font-size: @account-amount-curr-font-size;
+  padding-left: @account-amount-curr-padding-left;
+}
+
+.account-code-container {
+  float: none;
+  display: block;
+  margin-top: @account-code-container-margin-top;
+  font-weight: @account-code-container-font-weight;
+  height: @account-code-container-height;
+  color: @account-code-container-color;
+  font-size: @account-code-container-font-size;
+  padding-top: @account-code-container-padding-top;
+  line-height: @account-code-container-line-height;
+}
+
+.account-code-line{
+   line-height: @account-code-height;
+}
+
+.account-biciban-label {
+  font-weight: @account-biciban-label-font-weight;
+  color: @account-biciban-label-color;
+  padding-left: @account-biciban-label-padding-left;
+}
+
+.page.header {
+    line-height:@account-page-header-line-height;
+    min-height: @account-page-header-line-height;
+    margin-bottom: 0;
+    margin-top:@account-page-header-margin-top;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.page.header.toast-active {
+    margin-top: 5px;
+}
+
+
+.page.title {
+    text-transform: @account-page-titletext-transform;
+    color: @account-page-titlecolor;
+    float: @account-page-titlefloat;
+    padding: @account-page-titlepadding;
+    font-size: @account-page-titlefont-size;
+    font-weight: @account-page-titlefont-weight;
+    line-height: @account-page-titleline-height;
+}
+
+
+.sidebar-container.showsb{
+    collapse: false;
+    margin-left:0px;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+    }
+
+    .sidebar-container.hidesb{
+        collapse: true;
+        margin-left:-260px;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+    }
+
+    .app.main.container.hidesb{
+    margin-left:0;
+    width: 100%;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+    }
+
+    .app.main.container.showsb{
+    margin-left:260px;
+    width: ~"calc(100% - 260px)";
+    min-width: 250px;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+   }
+
+
+.account-actions-panel {
+    width: 100%;
+    padding-top: @account-actions-panel-padding-top;
+    margin-top: @account-actions-panel-margin-top;
+    border-top: @account-actions-panel-border-top;
+    cursor: default;
+}
+.account-actions-image {
+    width: @account-actions-image-width;
+    height: @account-actions-image-height;
+    margin-right: @account-actions-image-margin-right;
+    margin-left: @account-actions-image-margin-left;
+}
+
+.action-component{
+    cursor:pointer;
+    opacity:0.85;
+}
+
+.action-component:hover{
+    opacity:1;
+}
+
+
+.curr-img:hover{
+    opacity:1;
+}
+
+.account-actions-text {
+    font-size: @account-actions-text-font-size;
+    font-weight: @account-actions-text-font-weight;
+    color:@account-actions-text-color;
+}
+
+.account-actions-separator {
+    border-left: @account-actions-separator-border-left;
+    font-weight:@account-actions-separator-font-weight;
+    margin-left: @account-actions-separator-margin-left;
+    padding-right: @account-actions-separator-padding-right;
+}
+
+.acc-dets-panel{
+    cursor: default !important;
+}
+
+
+.account-selected-action-text {
+    font-size: @account-actions-text-font-size;
+    font-weight: 600;
+    color:#f18e1b;
+}
+
+
+.account-add-link-action-group {
+   float: none;
+   margin: 0 auto;
+   margin-top: @account-add-link-action-group-margin-top;
+   text-align: center;
+   width: auto;
+   height: auto;
+}
+
+.account-add-link-action-panel {
+  margin-left: 0;
+}
+
+.account-add-link-action-text {
+    font-size: @account-actions-text-font-size;
+    font-weight: 600;
+    color:#f18e1b;
+}
+
+.account-add-action-panel{
+   border-top: 1px solid #cacaca;
+   padding-top: 10px;
+   margin-top: 13px;
+}
+
+.account-transfer-action-panel {
+    border-top: 1px solid #cacaca;
+    padding-top: 10px;
+    margin-top: 10px;
+
+}
+
+.account-add-image {
+    height: 63.1875px;
+}
+
+.account-add-currency-action-panel {
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin: 1px;
+}
+
+.account-add-submit-button {
+  width: 100px;
+  border-radius: 0px;
+}
+
+.account-new-text-box-label{
+    font-family: @standard-font-family;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom:@text-box-label-padding-bottom;
+    -webkit-font-smoothing: antialiased;
+}
+
+.account-cancel-action-image {
+    width: @account-cancel-action-image-width;
+    height: @account-cancel-action-image-height;
+    margin-right: @account-cancel-action-image-margin-right;
+    margin-left: @account-cancel-action-image-margin-left;
+    float: right;
+}
+
+.account-add-new-form-group {
+    margin-bottom: @account-add-new-form-group-margin-bottom;
+    padding-left: @account-add-new-form-group-padding-left;
+    padding-right: @account-add-new-form-group-padding-right;
+}
+
+.account-name-text-field {
+    height: @account-name-text-field-height;
+    min-height: @account-name-text-field-height;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.account-cancel-form-group {
+    margin-bottom: @account-cancel-form-group-margin-bottom;
+    margin-top: @account-cancel-form-group-margin-top;
+    padding-top: @account-cancel-form-group-padding-top;
+    padding-bottom: @account-cancel-form-group-padding-bottom;
+}
+
+.account-float-left-group {
+    margin: 0px;
+    padding-right: @account-float-left-group-padding-right;
+    float: left;
+}
+
+.edit-account-img {
+    height: @edit-account-img-height;
+    width: @edit-account-img-width;
+    opacity: @edit-account-img-opacity;
+    float: right;
+    clear: both;
+    z-index: 99999;
+    cursor:pointer;
+}
+
+.edit-account-img:hover{
+    opacity:1;
+}
+
+.account-edit-action-panel {
+    border-top: @account-edit-action-panel-border-top;
+    padding-top: @account-edit-action-panel-padding-top;
+    margin-top: 8px;
+}
+
+.account-edit-form-group {
+    margin-bottom: 0px;
+    padding-left: @account-edit-form-group-padding-left;
+    padding-right: @account-edit-form-group-padding-right;
+}
+
+
+.transfer-actions{
+    cursor:pointer;
+    opacity:0.85;
+}
+
+.transfer-actions:hover{
+    opacity:1;
+}
+
+.amount-text-label{
+    width:100%;
+    text-align:left !important;
+
+}
+
+.transfer-submit-button {
+  width: 100px;
+  border-radius: 0px;
+  margin-left: 10px;
+}
+
+.comment-area{
+    resize: none;
+    text-transform: none !important;
+}
+
+.amount-text-field {
+    height: 30px;
+    min-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-width:200px;
+    margin-right:0 !important;
+    clear:both;
+    display:inline;
+    text-align: right;
+}
+
+.amount-separator {
+    vertical-align:bottom;
+}
+
+
+.internal-form-control{
+    max-width:400px;
+    text-transform: uppercase;
+}
+
+.amount-cents-text-field {
+  height: 30px;
+  min-height: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width:40px;
+  margin-right:0 !important;
+  clear:both;
+  display:inline;
+}
+
+
+.panel-internal-input {
+    margin-right: 0px;
+    margin-left: 5px;
+    height:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 380px
+}
+
+.internal-panel-wrapper{
+    padding-left: 0px;
+    padding-right: 5px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+.internal-transfer-visual{
+    padding-top:30px;
+    padding-left:10px;
+    padding-right:0px;
+    padding-bottom:30px;
+}
+
+.internal-transfer-textual{
+    padding-top:0px;
+    padding-left:10px;
+    padding-right:0px;
+    padding-bottom:0px;
+    font-size:12px;
+}
+
+.internal-arrow-img{
+    width: 15px;
+    height: 15px;
+    margin-top: -45px;
+}
+
+.internal-sub-amount{
+
+}
+
+.summary-sub-panel {
+  min-width: 182px;
+  width: 45%;
+  height: 80px;
+  color: white;
+  font-weight: 20px;
+  font-size: 12px;
+  background-color: #f18e1b;
+  display: inline-block;
+  padding: 10px;
+  padding-top: 5px;
+  margin-top: 2px;
+  text-transform: uppercase;
+  border-top-style: dotted;
+  border-top-color: transparent;
+}
+.summary-biciban-text {
+  font-size: 11px;
+}
+.summary-sub-panel-inactive {
+  background-color: #BEBEBE;
+  border-top-style: dotted;
+  border-top-color: white;
+}
+.summary-highlight {
+  color: #f18e1b;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.summary-comments {
+  width: 95%;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  display: block;
+  overflow: hidden !important;
+}
+
+
+.visual-summary-amount{
+  font-weight:bold;
+}
+
+.main-toast {
+    position: fixed;
+    margin-left: 0;
+    border-top: 0;
+    margin-bottom: 0;
+    line-height: 0em;
+    z-index: 99999999;
+    width: @main-toast-width;
+    left: @main-toast-left;
+    min-width: @main-toast-min-width;
+    height: @main-toast-height;
+    top: @main-toast-top;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+
+}
+
+
+.toast-close {
+    font-size: @toast-close-font-size;
+    margin-top: @toast-close-margin-top;
+}
+
+.toast-text {
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  display: block;
+  overflow: hidden !important;
+  margin: 0;
+  width: @toast-text-width;
+  height: @toast-text-height;
+  margin-top: @toast-text-margin-top;
+  line-height:  @toast-text-line-height;
+}
+
+.withdraw-panel-wrapper {
+    padding-left: 0px;
+    padding-right: 5px;
+    height: 420px;
+    margin-bottom: 10px;
+}
+
+.panel-withdrawal-input{
+    margin-right: 0px;
+    margin-left: 5px;
+    height:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 455px
+ }
+
+.pin-text-field{
+    display:inline-block;
+    width: 29px;
+    min-height:25px;
+    height:25px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.pin-text-field[disabled] {
+    cursor: not-allowed;
+    background-color: #6F6868;
+    opacity: 1;
+}
+
+.pin-msg {
+    position: absolute;
+}
+
+.withdraw-submit-button {
+    width: 100px;
+    border-radius: 0px;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.withdraw-watermark {
+  width: 50px;
+  height: 50px;
+  float:right;
+  margin-top:10px;
+}
+
+.account-withdraw-action-panel {
+    border-top: 1px solid #cacaca;
+    padding-top: 10px;
+    margin-top: 40px;
+}
+
+
+.color-selector-label {
+  padding-left:10px
+}
+
+
+.color-selector-toolbar{
+    margin-left: 5px;
+    display: block;
+}
+
+.color-selector-btn{
+    border-radius: 0;
+    min-height: 33px;
+    min-width: 33px;
+}
+
+.color-selector-btn:hover {
+  opacity:0.9;
+}
+
+.color-selector-btn.active {
+  border: 2px solid grey;
+  border-radius: 2px;
+}
+
+.add-account-panel {
+   min-height: 265px;
+}
+
+@media screen and (min-width: 1296px) {
+  .app.header.content {
+    width: 100%;
+  }
+  .app.warning.container,
+  .app.toast.container {
+    margin-left: -250px;
+  }
+  .header-container {
+    width: 100%;
+  }
+  .sidebar-toggle{
+    collapse: true;
+    display: none;
+  }
+
+  .app.main.container {
+        margin-left:260px;
+        width: ~"calc(100% - 260px)";
+        min-width: 250px;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+    }
+}
+
+@media (max-width: 767px) {
+  .app.main.container {
+    width: 100%;
+  }
+  .navbar-user {
+    collapse: true;
+    display: none;
+  }
+
+  .navbar-logout {
+    margin-top: -25px;
+    padding-left: 40px;
+    margin-right: 25px;
+  }
+
+    .brand-image {
+        margin-left: -15px;
+    }
+
+
+  .header-container {
+    width: 100%;
+  }
+
+   .sidebar-toggleLG{
+    collapse: true;
+    display: none;
+   }
+
+  .sidebar-container{
+    collapse: true;
+    margin-left:-260px;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+  }
+
+  .app.main.container {
+    margin-left:0;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1295px) {
+  .app.main.container {
+    width: 100%;
+  }
+  .header-container {
+    width: 100%;
+  }
+
+  .sidebar-container{
+    collapse: true;
+    margin-left:-260px;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+  }
+
+  .sidebar-toggleLG{
+    collapse: true;
+    display: none;
+  }
+
+  .app.main.container {
+    margin-left:0;
+   -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .header-container {
+    width: 100%;
+  }
+}
+
+/* Login container width */
+@media (max-width: 460px) {
+    .login img {
+    margin: 0px 0px 35px 0px;
+    float:left;
+    }
+
+    .app.container.bottom{
+    height:auto;
+    }
+
+    .app.bottom.content{
+    width:100%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+.panel-wrapper {
+    width: 33.33%;
+    min-width: 308px;
+    padding: 4px;
+    margin-right: 0px;
+}
+
+@media (min-width: 986px) and (max-width: 1295px) {
+  .panel-wrapper.showsb {
+    width: 50%;
+  }
+
+
+  .withdraw-panel-wrapper.showsb{
+      width:100%
+  }
+
+ .main-toast{
+    width: ~"calc(100% - 99px)";
+    left: 57px;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+ }
+
+ .main-toast.showsb{
+    width: ~"calc(100% - 359px)";
+    left: 317px;
+ }
+
+
+}
+
+@media (min-width: 1296px) {
+     .main-toast.hidesb{
+        width: ~"calc(100% - 99px)";
+        left: 57px;
+    }
+
+}
+
+@media (max-width: 985px) {
+  .panel-wrapper.showsb {
+    width: 100%;
+  }
+
+   .main-toast{
+    width: ~"calc(100% - 99px)";
+    left: 57px;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+ }
+
+ .main-toast.showsb{
+    width: ~"calc(100% - 359px)";
+    left: 317px;
+ }
+
+}
+@media (min-width: 732px) and (max-width: 1040px) {
+  .panel-wrapper {
+    width: 50%;
+  }
+}
+@media (max-width: 731px) {
+  .panel-wrapper {
+    width: 100%;
+  }
+
+    .main-toast {
+    width: ~"calc(100% - 99px)";
+    left: 57px;
+    -webkit-transition: @app-default-transition;
+    -moz-transition: @app-default-transition;
+    -o-transition: @app-default-transition;
+    transition: @app-default-transition;
+  }
+}
+
+.ext-fund-input-pnl-height-490{
+  height: 490px !important;
+}
+
+.ext-fund-input-pnl-height-210{
+  height: 210px;
+}
+
+
+.connections-search-panel-wrapper {
+    min-width: 308px;
+    padding: 4px;
+    margin-right: 0px;
+}
+
+
+.connections-straight-line-wrapper {
+
+    padding-left: 4px;
+    padding-right:4px;
+}
+
+.connections-straight-line{
+    min-width: 308px;
+    border: 1px;
+    background-color: black;
+    height: 0.5px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+
+}
+
+.connection-panel {
+    .account.panel;
+    height:  90px;
+}
+
+.connection-action-group {
+      .account-add-link-action-group;
+      margin-top: 20px;
+      margin-left : 20px;
+}
+
+.connection-add-action-group {
+      .connection-action-group;
+      float: left;
+      margin-top: 5px;
+      margin-left : 20px;
+}
+
+
+.connections-search-label {
+    .account-add-link-action-text;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 2%;
+}
+
+.connections-search-text-field {
+   .amount-text-field;
+   width: 60%;
+   clear: none;
+   float:left;
+   max-width: 100%;
+   text-align: left;
+}
+
+
+.connection-add-image {
+    height: 40px;
+    float: left;
+    margin-left: 50px;
+}
+
+.connection-detail-container {
+   .account-code-container;
+   margin-top:0px;
+   padding-top:0px;
+}
+
+.connections-avatar-image {
+    height:  58px;
+    margin-bottom: 0px;
+    float:left;
+    padding-right:10px;
+}
+
+
+.connections-alias {
+    .account.name;
+    width: 50%;
+    padding-bottom: 0px;
+}

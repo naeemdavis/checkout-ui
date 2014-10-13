@@ -1,0 +1,234 @@
+.card {
+	box-shadow: 0px 1px 2px #999999;
+	background: #ffffff;
+	border-radius: 1px;
+	min-height: 90px;
+	height: 90px;
+	margin-bottom: 10px;
+	padding: 0;
+	border-bottom: 2px solid #f18e1b;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+	position: relative;
+	bottom: 0px;
+   }
+
+ .top-card {
+  	min-height: 105px;
+	height: 105px;
+ }
+.search-card {
+	padding: 0 20px;
+}
+.search-card .card-h1 {
+	margin-bottom: 10px;
+}
+
+.card:hover {
+	box-shadow: 0px 1px 8px #999999;
+	cursor: pointer;
+}
+
+.card:hover .picture-triangle {
+	border-width: 0 0 88px 15px;
+}
+
+.card.connection-card {
+	height: 90px;
+}
+
+.card .profile-picture {
+	height: 88px;
+	background-size: cover;
+	background-position: 75% 50%;
+	-webkit-transition: background-position 0.5s ease-in-out;
+    -moz-transition: background-position 0.5s ease-in-out;
+    -o-transition: background-position 0.5s ease-in-out;
+    transition: background-position 0.5s ease-in-out;
+}
+
+.card .connection-details {
+	height: 100%;
+	background: green;
+}
+
+.card-wrapper {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.picture-triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 88px 25px;
+	border-color: transparent transparent #ffffff transparent;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	-webkit-transition: border-width 0.5s ease-in-out;
+    -moz-transition: border-width 0.5s ease-in-out;
+    -o-transition: border-width 0.5s ease-in-out;
+    transition: border-width 0.5s ease-in-out;
+}
+.card-h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #f08f00;
+	font-size: 16px;
+}
+
+.alias-email {
+	margin: 5px 0;
+}
+
+.profile-details {
+	padding: 5px 0 0 5px;
+}
+.profile-details-wrapper {
+	height: 88px;
+	width: 75%;
+	background-color: #FFF;
+	float: left;
+	position: relative;
+}
+.profile-picture-wrapper {
+	width: 25%;
+	max-width: 88px;
+	float: left;
+	position: relative;
+}
+.to-ellipsis {
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	width: 95%;
+	overflow: hidden;
+}
+.v-align {
+	display: table !important;
+	height: 100%;
+}
+.middle-align {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	position: relative;
+	z-index: 1000;
+}
+#connenctionsSearchTextInput {
+	width: 100%;
+}
+
+#connectionAddPanel .card-h1 {
+	float: left;
+	padding: 8px;
+}
+
+.section-break {
+	padding: 0 4px;
+}
+
+.section-break hr {
+	display: block; height: 1px;
+    border: 0; border-top: 2px solid #D1D1D1;
+    margin: 1em 0; padding: 0;
+}
+
+.profile-card-main {
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.main-profile-picture {
+	width: 50%;
+	border-radius: 50%;
+	border: 3px solid #f08f00;
+	left: 25%;
+	position: relative;
+	top: 0;
+	box-shadow: 0px 4px 10px #999999;
+}
+
+.profile-card-main .alias {
+	text-align: center;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #595755;
+	margin-top: 10px;
+}
+
+.profile-card-main .email, .profile-card-main .mobile {
+	text-align: center;
+}
+.txn-details {
+	font-weight: bold;
+	font-size: 26px;
+}
+.pending-info {
+	padding: 5px;
+	margin-top: 10px;
+	width: 100%;
+	float: left;
+}
+.connection-profile-card {
+	height: 200px;
+}
+.pending-border {
+	border-top: 1px solid #E7E7E7;
+}
+img.pending-icon {
+	width: 30%;
+	left: 35%;
+	position: relative;
+}
+.pending-align {
+	text-align: center;
+}
+.pending-title {
+	font-size: 16px;
+	font-weight: bold;
+	color: #f08f00;
+	text-transform: uppercase;
+	margin: 5px 0;
+}
+
+#editButton {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	right: 10px;
+	z-index: 10;
+}
+#editButton img {
+	height: 20px;
+	width: 20px;
+}
+
+.card.editExpand {
+	height: 185px;
+	box-shadow: 0px 6px 8px #999999;
+	bottom: 5px;
+	position: relative;
+}
+.stepBorder {
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.animate-enter {
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+	opacity: 1;
+}
